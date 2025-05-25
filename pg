@@ -17,7 +17,7 @@ for i in df.iloc[:,2:7]:
     df[i] = df[i].astype('int')
     df.head()
     df.describe().T
-Numerical = df.select_dtypes(include=[np.number]).columnsprint(Numerical)
+Numerical = df.select_dtypes(include=[np.number]).columns
 for col in Numerical:
     plt.figure(figsize=(10, 6))
     df[col].plot(kind='hist', title=col, bins=60, edgecolor='black')
@@ -548,3 +548,9 @@ Program 10
  plt.ylabel('Principal Component 2')
  plt.legend(title="Cluster")
  plt.show()
+
+
+Certification issue
+
+import ssl
+ssl.create_default_https_context=ssl.create_unverified_context
